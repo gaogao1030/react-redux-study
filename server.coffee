@@ -9,7 +9,7 @@ port = 3000
 
 compiler = webpack(config)
 
-app.use(webpackDevMiddleware(compiler,{ noInfo: true,publickPath: config.output.publicPath }))
+app.use(webpackDevMiddleware(compiler,{ noInfo: true,publicPath: config.output.publicPath }))
 app.use(webpackHotMiddleware(compiler))
 
 app.get "/", (req,res) ->
