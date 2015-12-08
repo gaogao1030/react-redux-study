@@ -1,13 +1,13 @@
 import React from 'react'
 import { render } from 'react-dom'
-import App from './src/components/AddTodo'
+import AddTodo from './src/components/AddTodo'
 
 setTimeout(
   function(){
     render(
-      <App />,
+      <AddTodo />,
       document.getElementById("root")
         )
   },
-  2000
+  1000
 )

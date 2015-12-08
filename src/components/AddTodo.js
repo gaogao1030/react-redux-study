@@ -1,10 +1,20 @@
-import React, { findDOMNode,Component,PropTypes } from 'react';
+import React, { findDOMNode,Component } from 'react';
 
-export default class App extends Component{
+export default class AddTodo extends Component{
+  handleClick(e) {
+    const node = findDOMNode(this.refs.input)
+    const text = node.value.trim()
+    this.props.onAddClick(text)
+    node.value = ''
+  }
+
   render() {
     return (
       <div>
-        jee
+        <input type='text' ref='input' />
+        <button onClick={e => this.handleClick(e)}>
+          Add
+        </button>
       </div>
     )
   }
